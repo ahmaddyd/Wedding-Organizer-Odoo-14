@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_pelanggan_action" model="ir.actions.act_window">
+            <field name="name">Pelanggan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="context">{
+                'search_default_pelanggan': 1,
+                'default_is_pelanggan': True,
+                }
+            </field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="wedding_pelanggan_act" name="Pelanggan" parent="wedding_organizer_partner_menu_categ"
+                  action="wedding_pelanggan_action" sequence="11"/>
+    </data>
+</odoo>
