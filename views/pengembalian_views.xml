@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_pengembalian_view_tree" model="ir.ui.view">
+            <field name="name">Daftar Pengembalian Barang WO</field>
+            <field name="model">wedding.pengembalian</field>
+            <field name="arch" type="xml">
+                <tree string="Pengembalian WO">
+                    <field name="name"/>
+                    <field name="tanggal_pengembalian"/>
+                    <field name="penyewa"/>
+                    <field name="tagihan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="wedding_pengembalian_action" model="ir.actions.act_window">
+            <field name="name">Pengembalian Barang</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wedding.pengembalian</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="wedding_pengembalian_menu_categ" name="Pengembalian Barang" parent="wedding_organizer_menu_root"
+                  action="wedding_pengembalian_action" sequence="12"/>
+
+    </data>
+</odoo>

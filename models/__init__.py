@@ -9,3 +9,4 @@ from . import res_partner_inherit
 from . import panggung
 from . import pelaminan
 from . import order
+from . import pengembalian
