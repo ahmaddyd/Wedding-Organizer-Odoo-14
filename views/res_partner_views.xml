@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_inherit_view_form" model="ir.ui.view">
+            <field name="name">res_partner.inherit.view.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="vat" position="after">
+                    <field name="is_pegawai"/>
+                    <field name="is_pelanggan"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="res_partner_inherit_search" model="ir.ui.view">
+            <field name="name">res_partner.inherit.view.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <filter name="pelanggan" string="Pelanggan" domain="[('is_pelanggan', '=', True)]"/>
+                    <filter name="pegawai" string="Pegawai" domain="[('is_pegawai', '=', True)]"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
