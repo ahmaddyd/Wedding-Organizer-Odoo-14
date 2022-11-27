@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/kursi_pengantin_views.xml',
         'views/kursi_tamu_views.xml',
+        'views/akunting_views.xml',
         'views/menu.xml',
         'views/views.xml',
         'views/templates.xml',

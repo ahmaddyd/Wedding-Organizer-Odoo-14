@@ -3,3 +3,4 @@
 from . import models
 from . import kursipengantin
 from . import kursitamu
+from . import akunting

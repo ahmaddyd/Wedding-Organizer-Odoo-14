@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_akunting_view_tree" model="ir.ui.view">
+            <field name="name">Akunting Wedding Organizer</field>
+            <field name="model">wedding.organizer_akunting</field>
+            <field name="arch" type="xml">
+                <tree string="Wedding Organizer Akunting">
+                    <field name="name"/>
+                    <field name="tanggal"/>
+                    <field name="debet"/>
+                    <field name="kredit"/>
+                    <field name="saldo"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- model.name action window -->
+        <record id="wedding_akunting_action" model="ir.actions.act_window">
+            <field name="name">Akunting Wedding Organizer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wedding.organizer_akunting</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="wedding_akunting_menu_act" name="Akunting" parent="wedding_organizer_menu_root"
+                  action="wedding_akunting_action" sequence="14"/>
+    </data>
+</odoo>
