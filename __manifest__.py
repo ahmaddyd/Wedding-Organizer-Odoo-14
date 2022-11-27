@@ -26,6 +26,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/kursi_pengantin_views.xml',
+        'views/menu.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
