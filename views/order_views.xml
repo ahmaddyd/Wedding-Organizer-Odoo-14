@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_order_view_tree" model="ir.ui.view">
+            <field name="name">Wedding Organizer Order</field>
+            <field name="model">wedding.order</field>
+            <field name="arch" type="xml">
+                <tree string="WO">
+                    <header>
+                        <button name="kembali_barang" string="Kembali Barang" class="btn btn-success" states=""
+                                type="object"/>
+                    </header>
+                    <field name="name"/>
+                    <field name="pemesan"/>
+                    <field name="tanggal_pesan"/>
+                    <field name="tanggal_pengiriman"/>
+                    <field name="order_detail_panggung_ids"/>
+                    <field name="order_detail_kursi_tamu_ids"/>
+                    <field name="total"/>
+                    <field name="sudah_kembali"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="wedding_order_view_form" model="ir.ui.view">
+            <field name="name">Form Wedding Organizer Order</field>
+            <field name="model">wedding.order</field>
+            <field name="arch" type="xml">
+                <form string="Form WO">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="pemesan"/>
+                            <field name="tanggal_pesan"/>
+                            <field name="tanggal_pengiriman"/>
+                            <field name="total"/>
+                            <field name="sudah_kembali"/>
+                        </group>
+
+                        <notebook>
+                            <page name="panggung" string="Panggung">
+                                <field name="order_detail_panggung_ids">
+                                    <tree editable="bottom">
+                                        <field name="panggung_id"/>
+                                        <field name="harga_satuan" readonly=""/>
+                                        <field name="qty" sum="Total Barang"/>
+                                        <field name="harga" sum="Total"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page name="kursi_tamu" string="Kursi Tamu">
+                                <field name="order_detail_kursi_tamu_ids">
+                                    <tree editable="bottom">
+                                        <field name="kursi_tamu_id"/>
+                                        <field name="harga_satuan" readonly=""/>
+                                        <field name="qty" sum="Total Barang"/>
+                                        <field name="harga" sum="Total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="wedding_order_action" model="ir.actions.act_window">
+            <field name="name">Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wedding.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="wedding_order_menu_categ" name="Order" parent="wedding_organizer_menu_root"
+                  action="wedding_order_action"
+                  sequence="11"/>
+    </data>
+</odoo>

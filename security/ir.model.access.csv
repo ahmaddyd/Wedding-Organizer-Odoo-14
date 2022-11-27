@@ -5,3 +5,6 @@ access_wedding_organizer_akunting,access.wedding.organizer_akunting,model_weddin
 access_wedding_partner,access.wedding.partner,model_wedding_partner,,1,1,1,1
 access_wedding_panggung,access.wedding.panggung,model_wedding_panggung,,1,1,1,1
 access_wedding_pelaminan,access.wedding.pelaminan,model_wedding_pelaminan,,1,1,1,1
+access_wedding_order,access.wedding.order,model_wedding_order,,1,1,1,1
+access_wedding_order_detail_panggung,access.wedding.order_detail_panggung,model_wedding_order_detail_panggung,,1,1,1,1
+access_wedding_order_detail_kursi_tamu,access.wedding.order_detail_kursi_tamu,model_wedding_order_detail_kursi_tamu,,1,1,1,1

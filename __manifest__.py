@@ -30,6 +30,7 @@
         'views/akunting_views.xml',
         'views/panggung_views.xml',
         'views/pelaminan_views.xml',
+        'views/order_views.xml',
         'views/res_partner_views.xml'
         'views/menu.xml',
         'views/views.xml',
