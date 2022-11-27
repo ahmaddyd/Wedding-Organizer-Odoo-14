@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_pegawai_action" model="ir.actions.act_window">
+            <field name="name">Pegawai</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="context">{
+                'search_default_pegawai': 1,
+                'default_is_pegawai': True,
+                }
+            </field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="wedding_pegawai_act" name="Pegawai" parent="wedding_organizer_partner_menu_categ"
+                  action="wedding_pegawai_action" sequence="10"/>
+    </data>
+</odoo>

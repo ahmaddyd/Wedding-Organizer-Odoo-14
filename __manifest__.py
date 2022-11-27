@@ -31,6 +31,7 @@
         'views/panggung_views.xml',
         'views/pelaminan_views.xml',
         'views/pelanggan_views.xml',
+        'views/pegawai_views.xml',
         'views/pengembalian_views.xml',
         'views/order_views.xml',
         'views/res_partner_views.xml'
