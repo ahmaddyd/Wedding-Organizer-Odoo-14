@@ -2,3 +2,4 @@
 
 from . import models
 from . import kursipengantin
+from . import kursitamu

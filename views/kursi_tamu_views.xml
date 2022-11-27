@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_kursi_tamu_view_tree" model="ir.ui.view">
+            <field name="name">Daftar Kursi Tamu</field>
+            <field name="model">wedding.kursi_tamu</field>
+            <field name="arch" type="xml">
+                <tree string="Kursi Tamu Pelaminan">
+                    <field name="name"/>
+                    <field name="tipe"/>
+                    <field name="stok"/>
+                    <field name="harga"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="wedding_kursi_tamu_view_form" model="ir.ui.view">
+            <field name="name">Form Kursi Tamu</field>
+            <field name="model">wedding.kursi_tamu</field>
+            <field name="arch" type="xml">
+                <form string="Kursi Tamu Pelaminan">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="tipe"/>
+                            <field name="stok"/>
+                            <field name="harga"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="wedding_kursi_tamu_action" model="ir.actions.act_window">
+            <field name="name">Kursi Tamu</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wedding.kursi_tamu</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="wedding_kursi_tamu_act" name="Kursi Tamu" parent="wedding_organizer_menu_categ"
+                  action="wedding_kursi_tamu_action" sequence="13"/>
+    </data>
+</odoo>
