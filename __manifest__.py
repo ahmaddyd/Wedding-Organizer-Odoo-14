@@ -28,6 +28,7 @@
         'views/kursi_pengantin_views.xml',
         'views/kursi_tamu_views.xml',
         'views/akunting_views.xml',
+        'views/panggung_views.xml',
         'views/res_partner_views.xml'
         'views/menu.xml',
         'views/views.xml',

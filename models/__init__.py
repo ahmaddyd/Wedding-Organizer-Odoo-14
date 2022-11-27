@@ -6,3 +6,4 @@ from . import kursitamu
 from . import akunting
 from . import partner
 from . import res_partner_inherit
+from . import panggung

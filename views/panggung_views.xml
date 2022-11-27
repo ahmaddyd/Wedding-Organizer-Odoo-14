@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wedding_panggung_view_tree" model="ir.ui.view">
+            <field name="name">Jenis Panggung</field>
+            <field name="model">wedding.panggung</field>
+            <field name="arch" type="xml">
+                <tree string="Panggung Pelaminan">
+                    <field name="name"/>
+                    <field name="pelaminan_id"/>
+                    <field name="kursi_pengantin_id"/>
+                    <field name="bunga"/>
+                    <field name="accesories"/>
+                    <field name="harga"/>
+                    <field name="stok"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="wedding_panggung_view_form" model="ir.ui.view">
+            <field name="name">Panggung</field>
+            <field name="model">wedding.panggung</field>
+            <field name="arch" type="xml">
+                <form string="Wedding Panggung Pelaminan">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="pelaminan_id"/>
+                            <field name="kursi_pengantin_id"/>
+                        </group>
+                        <group>
+                            <field name="bunga"/>
+                            <field name="accesories"/>
+                            <field name="stok"/>
+                        </group>
+                        <group>
+                            <field name="harga"/>
+                        </group>
+                        <notebook>
+                            <page string="DESKRIPSI PELAMINAN">
+                                <field name="deskripsi_pelaminan"/>
+                            </page>
+                            <page string="DESKRIPSI KURSI">
+                                <field name="deskripsi_kursi"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="wedding_panggung_view_action" model="ir.actions.act_window">
+            <field name="name">Daftar Jenis Panggung</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wedding.panggung</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="wedding_panggung_pelaminan_menu_act" name="Panggung Pelaminan"
+                  parent="wedding_organizer_menu_categ"
+                  action="wedding_panggung_view_action" sequence="10"/>
+    </data>
+</odoo>
