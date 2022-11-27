@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_wo_order" model="ir.actions.report">
+            <field name="name">Report Order</field>
+            <field name="model">wedding.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">weddingorganizer.report_wo_order</field>
+            <field name="report_file">weddingorganizer.report_wo_order</field>
+            <field name="binding_model_id" ref="model_wedding_order"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
