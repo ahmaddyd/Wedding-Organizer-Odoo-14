@@ -3,7 +3,7 @@
     <data>
         <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
         <menuitem id="wedding_organizer_menu_root"
-                  name="Wedding Organizer"
+                  name="WEDDING ORGANIZER"
                   sequence="0"/>
 
         <!-- This Menu Item Must have a parent -->

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Wedding Organizer",
+    'name': "WEDDING ORGANIZER",
 
     'summary': """
         Custom Module Odoo 14""",

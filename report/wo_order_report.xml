@@ -9,9 +9,11 @@
                         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"/>
 
                 <div class="page">
-                    <center> <h2>Faktur Order</h2> </center>
+                    <center>
+                        <h2>Faktur Order Wedding Organizer</h2>
+                    </center>
                     <div class="container">
-                        <h3>
+                        <t>
                             <div class="row">
                                 Kode Order :
                                 <span t-field="o.name"/>
@@ -31,82 +33,89 @@
                                 Tanggal Pengiriman :
                                 <span t-field="o.tanggal_pengiriman"/>
                             </div>
-                        </h3>
+
+                            <div class="row">
+                                Sudah Dikembalikan :
+                                <span t-field="o.sudah_kembali"/>
+                            </div>
+                        </t>
                     </div>
 
-                    <h4>
-                        <div class="row">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Jenis Panggung</th>
-                                        <th>Harga Satuan</th>
-                                        <th>Quantity</th>
-                                        <th>Harga</th>
-                                    </tr>
-                                </thead>
-                                <t t-foreach="o.order_detail_panggung_ids" t-as="k">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <span t-esc="k.panggung_id.name"/>
-                                            </td>
-                                            <td>
-                                                <span t-esc="k.harga_satuan"/>
-                                            </td>
-                                            <td>
-                                                <span t-esc="k.qty"/>
-                                            </td>
-                                            <td>
-                                                <span t-esc="k.harga"/>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </t>
-                            </table>
-                        </div>
-                    </h4>
+                    <table class="table table-bordered mt-4">
+                        <thead style="background-color:#000;color:white;font-weight: bold;font-weight: bold;">
+                            <tr>
+                                <td class="text-center">Jenis Panggung</td>
+                                <td class="text-center">Harga Satuan</td>
+                                <td class="text-center">Quantity</td>
+                                <td class="text-center">Harga</td>
+                            </tr>
+                        </thead>
 
-                    <h4>
-                        <div class="row">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Jenis Kursi</th>
-                                        <th>Harga Satuan</th>
-                                        <th>Quantity</th>
-                                        <th>Harga</th>
-                                    </tr>
-                                </thead>
-                                <t t-foreach="o.order_detail_kursi_tamu_ids" t-as="k">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <span t-esc="k.kursi_tamu_id.name"/>
-                                            </td>
-                                            <td>
-                                                <span t-esc="k.harga_satuan"/>
-                                            </td>
-                                            <td>
-                                                <span t-esc="k.qty"/>
-                                            </td>
-                                            <td>
-                                                <span t-esc="k.harga"/>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </t>
-                            </table>
-                        </div>
-                    </h4>
+                        <tbody>
+                            <t t-foreach="o.order_detail_panggung_ids" t-as="detail_order_panggung">
+                                <tr>
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_panggung.panggung_id.name"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_panggung.harga_satuan"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_panggung.qty"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_panggung.harga"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered mt-4">
+                        <thead style="background-color:#000;color:white;font-weight: bold;font-weight: bold;">
+                            <tr>
+                                <td class="text-center">Jenis Kursi</td>
+                                <td class="text-center">Harga Satuan</td>
+                                <td class="text-center">Quantity</td>
+                                <td class="text-center">Harga</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <t t-foreach="o.order_detail_kursi_tamu_ids" t-as="detail_order_kursi_tamu">
+                                <tr>
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_kursi_tamu.kursi_tamu_id.name"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_kursi_tamu.harga_satuan"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_kursi_tamu.qty"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <t t-esc="detail_order_kursi_tamu.harga"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
 
                     <div class="container">
-                        <h3>
+                        <t>
                             <div class="row">
-                                Total Harga :
-                                <span t-field="o.total"/>
+                                <div class="col text-right">
+                                    Total Harga :
+                                    <span t-field="o.total"/>
+                                </div>
                             </div>
-                        </h3>
+                        </t>
                     </div>
                 </div>
             </t>
