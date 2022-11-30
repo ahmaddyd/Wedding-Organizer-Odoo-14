@@ -20,7 +20,7 @@ Wedding Organizer merupakan sistem berbasis ERP menggunakan Odoo Framework yang 
 - Order Panggung, Pelaminan dan Kursi
 - Pegawai dan Customer Inherit
 - Akunting penghasilan bersih dan kotor
-- Menyediakan Layanan Jenis Bahan Jasa Laundry (Katun, Denim, Poliester, Kulit, Canvas, Viscose)
+- Menyediakan layanan pemesanan kebutuhan Wedding
 
 ## Tech
 - [Odoo](https://nightly.odoo.com/) - Using an Odoo nightly repository, you will be able to install and upgrade Odoo with the help of your traditional package manager (apt or yum).
