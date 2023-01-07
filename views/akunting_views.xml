@@ -21,6 +21,13 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">wedding.organizer_akunting</field>
             <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">
+                    Pemasukan akan terinput otomatis
+                </p>
+                <p>
+                </p>
+            </field>
         </record>
 
         <!-- This Menu Item must have a parent and an action -->

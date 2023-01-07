@@ -70,6 +70,13 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">wedding.order</field>
             <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">
+                    Silakan order pemesanan Wedding Organizer
+                </p>
+                <p>
+                </p>
+            </field>
         </record>
 
         <menuitem id="wedding_order_menu_categ" name="Order" parent="wedding_organizer_menu_root"
