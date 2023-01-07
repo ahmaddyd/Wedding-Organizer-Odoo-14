@@ -5,7 +5,7 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
                     <div style="margin-top:150px">
-                        <t t-call="weddingorganizer.report_wo_order" t-lang="o.pemesan.lang"/>
+                        <t t-call="Wedding-Organizer-Odoo-14.report_wo_order" t-lang="o.pemesan.lang"/>
                     </div>
                 </t>
             </t>
@@ -15,8 +15,8 @@
             <field name="name">Wedding Organizer Invoice</field>
             <field name="model">wedding.order</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">weddingorganizer.report_wedding_order</field>
-            <field name="report_file">weddingorganizer.report_wedding_order</field>
+            <field name="report_name">Wedding-Organizer-Odoo-14.report_wedding_order</field>
+            <field name="report_file">Wedding-Organizer-Odoo-14.report_wedding_order</field>
             <field name="print_report_name">'Order - %s' % (object.name)</field>
             <field name="binding_model_id" ref="model_wedding_order"/>
             <field name="binding_type">report</field>
