@@ -1,5 +1,6 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
+import datetime
 
 
 class Order(models.Model):
@@ -12,8 +13,9 @@ class Order(models.Model):
     order_detail_kursi_tamu_ids = fields.One2many(comodel_name='wedding.order_detail_kursi_tamu', inverse_name='name',
                                                   string='Order Detail Panggung', required=False)
     total = fields.Integer(compute='_compute_total', string='Total Harga', store=True, required=False)
-    tanggal_pesan = fields.Datetime(string='Tanggal Pemesanan', default=fields.Datetime.now(), required=False)
-    tanggal_pengiriman = fields.Date(string='Tanggal Pengiriman', default=fields.Date.today(), required=False)
+    tanggal_pesan = fields.Datetime(string='Tanggal Pemesanan', default=fields.Datetime.now(), required=True)
+    tanggal_pengiriman = fields.Datetime(string='Tanggal Pengiriman',
+                                         default=fields.Datetime.now() + datetime.timedelta(days=1), required=True)
     pemesan = fields.Many2one(comodel_name='res.partner', string='Pemesan', domain=[('is_pelanggan', '=', True)],
                               required=False)
     sudah_kembali = fields.Boolean(string='Sudah Dikembalikan', required=False)
