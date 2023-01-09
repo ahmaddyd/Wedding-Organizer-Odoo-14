@@ -5,7 +5,7 @@
             <field name="name">Akunting Wedding Organizer</field>
             <field name="model">wedding.organizer_akunting</field>
             <field name="arch" type="xml">
-                <tree string="Wedding Organizer Akunting">
+                <tree string="Wedding Organizer Akunting" create="false">
                     <field name="name"/>
                     <field name="tanggal"/>
                     <field name="debet"/>
